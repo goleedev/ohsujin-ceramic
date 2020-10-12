@@ -2,9 +2,15 @@ import React from 'react'
 
 const About = () => {
     return (
-        <div>
-            About
-        </div>
+        <>
+            <div>
+                <img  />
+                <span>오수진 도자기</span>
+            </div>
+            <div>
+
+            </div>
+        </>
     )
 }
 

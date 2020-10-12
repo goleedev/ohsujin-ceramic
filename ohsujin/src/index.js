@@ -2,12 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from 'components/App';
 import 'css/styles.css';
-import Footer from 'components/Footer';
+import 'bootstrap/dist/css/bootstrap.css'
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    <Footer />
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,10 +1,11 @@
-import React from 'react'
+import React from 'react';
+import ClassPricing from '../components/ClassPricing';
 
 const Class = () => {
     return (
-        <div>
-            Class
-        </div>
+        <>
+          <ClassPricing />  
+        </>
     )
 }
 
