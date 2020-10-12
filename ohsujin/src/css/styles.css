@@ -1,0 +1,19 @@
+
+
+* {
+    box-sizing: border-box;
+}
+  
+input {
+    all: unset;
+    box-sizing: border-box;
+    appearance: none;
+}
+  
+body {
+    background-color: #fff;
+    font-family: url(../css/fonts/Title_Light.otf);
+    font-size: 14px;
+    color: #555555;
+}
+  
