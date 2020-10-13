@@ -4,21 +4,22 @@ import Navigation from './Navigation';
 import Home from 'routes/Home';
 import About from 'routes/About';
 import Class from 'routes/Class';
-import Shop from 'routes/Shop';
+import Store from 'routes/Store';
 import Contact from 'routes/Contact';
 import Admin from 'routes/Admin';
 import Auth from 'routes/Auth';
+import Footer from './Footer';
 
-const AppRouter = ({ isLoggedIn }) => {
+const AppRouter = ({ userObj, isLoggedIn }) => {
     return (
         <Router>
-            <Navigation />
+            <Navigation userObj={userObj}/>
             <Switch>
                 <Route exact path="/">
                     <Home />   
                 </Route>
                 <Route exact path="/login">
-                    {isLoggedIn ? <Home /> : <Auth /> }  
+                    <Auth />
                 </Route>
                 <Route exact path="/about">
                     <About />   
@@ -26,16 +27,17 @@ const AppRouter = ({ isLoggedIn }) => {
                 <Route exact path="/class">
                     <Class />   
                 </Route>
-                <Route exact path="/shop">
-                    <Shop />   
+                <Route exact path="/store">
+                    <Store />   
                 </Route>
                 <Route exact path="/contact">
-                    <Contact />   
+                    <Contact userObj={userObj}/>   
                 </Route>
                 <Route exact path="/admin">
                     <Admin />   
                 </Route>
             </Switch>
+            <Footer />
         </Router>
     )
 }

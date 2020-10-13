@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Contact = () => {
+const Contact = ({ userObj }) => {
     return (
-        <div>
+        <form>
             Contact
-        </div>
+        </form>
     )
 }
 
