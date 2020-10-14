@@ -1,55 +1,30 @@
 import React, { useState } from 'react'
 import logo from '../images/logo.png';
-import { 
-    Collapse,
-    Navbar,
-    NavbarToggler,
-    NavbarBrand,
-    Nav,
-    NavItem,
-    NavLink,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem,
- } from 'reactstrap';
-import { Link } from 'react-router-dom/cjs/react-router-dom';
 
 const Navigation = ({ userObj }) => {
     const [collapsed, setCollapsed] = useState(true);
     const toggleNavbar = () => setCollapsed(!collapsed);
 
     return (
-    <div>
-        <Navbar color="light" light expand="md">
-            <NavbarBrand href="/" className="mr-auto">
-                <img src={logo} alt="logo" className="logo"/>
-            </NavbarBrand>
-            <NavbarToggler onClick={toggleNavbar} className="mr-2" />
-            <Collapse isOpen={!collapsed} navbar>
-                <Nav navbar>
-                    <NavItem>
-                        <NavLink href="/about">About Us</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href="/class">Class</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href="/store">Store</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href="/contact">Contact Us</NavLink>
-                    </NavItem>
-                    <div className="nav-login">
-                        <NavItem>
-                            <Link to="/login">Login</Link>
-                            <Link to="/login">Join</Link>
-                        </NavItem>                           
-                    </div>    
-                </Nav>
-            </Collapse>
-        </Navbar>
-    </div>
+    <nav className="navbar navbar-expand-md container">
+        <a className="navbar-brand" href="#">
+            <img src={logo} alt="logo" className="logo"/>    
+        </a>
+        <button onClick={toggleNavbar} className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+        </button>
+
+        <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li className="nav-item active">
+                    <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
+                </li>
+                <li className="nav-item">
+                    <a className="nav-link" href="#">Link</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
     );
 };
 

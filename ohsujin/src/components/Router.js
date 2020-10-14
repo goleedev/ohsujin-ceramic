@@ -1,5 +1,5 @@
 import React from 'react'
-import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navigation from './Navigation';
 import Home from 'routes/Home';
 import About from 'routes/About';
@@ -8,7 +8,9 @@ import Store from 'routes/Store';
 import Contact from 'routes/Contact';
 import Admin from 'routes/Admin';
 import Auth from 'routes/Auth';
+import Profile from 'routes/Profile';
 import Footer from './Footer';
+import Cart from 'routes/Cart';
 
 const AppRouter = ({ userObj, isLoggedIn }) => {
     return (
@@ -20,6 +22,12 @@ const AppRouter = ({ userObj, isLoggedIn }) => {
                 </Route>
                 <Route exact path="/login">
                     <Auth />
+                </Route> 
+                <Route exact path="/profile">
+                    <Profile />
+                </Route>
+                <Route exact path="/cart">
+                    <Cart />   
                 </Route>
                 <Route exact path="/about">
                     <About />   

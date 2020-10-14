@@ -4,8 +4,8 @@ const ClassPricing = () => {
     return (
         <>
             <div className="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-                <h1 className="display-4">수업 안내</h1>
-                <p className="lead">* 해당 수업료는 성인 기준입니다. 아동 클래스는 문의 부탁드립니다 :)</p>
+                <h1>수업 안내</h1>
+                <p>* 해당 수업료는 성인 기준입니다. 아동 클래스는 문의 부탁드립니다 :)</p>
             </div>
             <div className="container">
                 <div className="card-deck mb-3 text-center">

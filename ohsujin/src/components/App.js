@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import AppRouter from './Router';
-import Footer from './Footer';
 import { authService } from 'fbase';
 
 function App() {

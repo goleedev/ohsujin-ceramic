@@ -1,9 +1,12 @@
 import React from 'react'
+import ContactEmail from 'components/ContactEmail';
+import ContactUsCards from 'components/ContactUsCards';
 
 const Contact = ({ userObj }) => {
     return (
         <form>
-            Contact
+            <ContactEmail />
+            <ContactUsCards />
         </form>
     )
 }
