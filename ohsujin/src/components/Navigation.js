@@ -1,30 +1,38 @@
 import React, { useState } from 'react'
 import logo from '../images/logo.png';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
-const Navigation = ({ userObj }) => {
-    const [collapsed, setCollapsed] = useState(true);
-    const toggleNavbar = () => setCollapsed(!collapsed);
+const Navigation = (props, {userObj}) => {
+    const [isNavCollapsed, setIsNavCollapsed] = useState(true);
+    const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
 
     return (
-    <nav className="navbar navbar-expand-md container">
-        <a className="navbar-brand" href="#">
-            <img src={logo} alt="logo" className="logo"/>    
-        </a>
-        <button onClick={toggleNavbar} className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-        </button>
-
-        <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li className="nav-item active">
-                    <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
-                </li>
-                <li className="nav-item">
-                    <a className="nav-link" href="#">Link</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+        <nav className="navbar navbar-expand-lg navbar-light rounded container">
+            <Link className="navbar-brand" to="/">
+                <img src={logo} className="logo" alt="logo"/>
+            </Link>
+            <button className="custom-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded={!isNavCollapsed ? true : false} aria-label="Toggle navigation" onClick={handleNavCollapse}>
+                <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse justify-content-end`} id="navbarsExample09">
+                <div className="nav-items row">
+                    <Link className="nav-link" to="/about">ABOUT US</Link>
+                    <Link className="nav-link" to="/class">CLASS</Link>
+                    <Link className="nav-link" to="/store">STORE</Link>
+                    <Link className="nav-link" to="/contact">CONTACT US<span>|</span></Link>
+                    <div className="nav-top row">
+                        <Link className="nav-link" to="/login">
+                            <FontAwesomeIcon icon={faUser} color={"#555555"} size="2x" />
+                        </Link>
+                        <Link className="nav-link" to="/cart">
+                            <FontAwesomeIcon icon={faShoppingCart} color={"#555555"} size="2x" />
+                        </Link>
+                    </div>
+                </div>
+            </div>
+        </nav>
     );
 };
 

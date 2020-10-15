@@ -6,18 +6,18 @@ import email from '../images/circle4.png';
 
 const ContactUsCards = () => {
     return (
-        <div className="container">
-            <h2>Contact Us</h2>
-            <a href="https://pf.kakao.com/_ZExmGj" target="_blank" className="circle-btn col-md-3 col-sm-5">
+        <div className="row container contact-cards">
+            <h1 className="col-lg-12">Contact Us</h1>
+            <a href="https://pf.kakao.com/_ZExmGj" target="_blank" className="circle-btn col-md-3 col-sm-6">
                 <img src={kakao} alt="kakao" />
             </a>
-            <a href="tel:07040428642" className="circle-btn col-md-3 col-sm-5">
+            <a href="tel:07040428642" className="circle-btn col-md-3 col-sm-6">
                 <img src={instagram} alt="instagram" />
             </a>
-            <a href="https://www.instagram.com/thedamda_ceramic/" target="_blank" className="circle-btn col-md-3 col-sm-5">
+            <a href="https://www.instagram.com/thedamda_ceramic/" target="_blank" className="circle-btn col-md-3 col-sm-6">
                 <img src={call} alt="call" />
             </a>
-            <a href="/contact" className="circle-btn col-md-3 col-sm-5">
+            <a href="/contact" className="circle-btn col-md-3 col-sm-6">
                 <img src={email} alt="email" />
             </a>
         </div>

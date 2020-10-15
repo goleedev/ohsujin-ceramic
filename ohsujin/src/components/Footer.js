@@ -16,9 +16,9 @@ const Footer = () => {
             <Link to="/">
                 <img src={logo} alt="logo" className="footer-logo logo" />
             </Link>
-            <span id="copy">
+            <p id="copy">
                 &copy; Copyright {new Date().getFullYear()} 더담다 도예공방. All rights reserved.
-            </span>
+            </p>
         </footer>
     )
 }

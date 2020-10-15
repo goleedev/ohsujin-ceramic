@@ -1,4 +1,6 @@
-/* Fonts */
+/**********
+   Fonts
+***********/
 @font-face {
     font-family: 'GyeonggiBatang';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiBatang.woff') format('woff');
@@ -27,7 +29,10 @@
     font-style: normal;
 }
 
-/* Geneeral Settings */
+/**********
+  Geneeral
+  Settings
+***********/
 * {
     box-sizing: border-box;
 }
@@ -48,6 +53,7 @@ body {
 h1 {
     font-family: 'GmarketSansMedium';
     font-weight: bold;
+    text-align: center;
 }
 
 .btn {
@@ -64,22 +70,22 @@ h1 {
 ***********/
 .logo {
     width: 200px;
+    height: 100px;
 }
 
-.navbar {
-    height: 10vh;
-}
-
-.carousel {
-    height: 45vh !important;
+.carousel-container {
+    margin: 0 auto !important;
+    margin-top: 7% !important;
+    margin-bottom: 15% !important;
+    vertical-align: middle;
 }
 
 .carousel-caption {
     color: #555555 !important;
     text-align: left !important;
+    width: 40%;
     position: relative;
-    display: block;
-    left: 10% !important;
+    left: 20% !important;
     top: 27% !important;
 }
 
@@ -93,17 +99,20 @@ h1 {
 }
 
 .carousel-img {
-    width: 500px !important;
-    height: 500px !important;
     float: right;
+    width: 60%;
     position: relative;
-    right: 10% !important;
+    left: 20%;
+}
+
+.carousel-img img {
+    width: 250px !important;
+    height: 250px !important;
 }
 
 .carousel-indicators {
     position: absolute !important;
-    bottom: -50px !important;
-    margin: 0 !important;
+    bottom: -150px !important;
 }
 
 .carousel-indicators li {
@@ -151,45 +160,118 @@ h1 {
 /**********
     Nav
 ***********/
-.navbar li,
-.navbar button {
+.nav-link {
     color: #555 !important;
     font-family: GmarketSansMedium;
-    font-size: 12px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.nav-link svg {
+    width: 18px !important;
+}
+
+.nav-link span {
+    margin-left: 20px;
+}
+
+.nav-items {
+    height: 5%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-top a {
+    margin: 20px auto !important;
+    padding-right: 0;
 }
 
 /**********
    Footer
 ***********/
 footer {
+    position: relative;
+    display: flex;
+    align-items: center;
     font-size: 13px;
     line-height: 18px;
+    margin-bottom: 5%;
+    height: 4rem;
 }
 
 img.footer-logo {
-    display: inline-block;
-    position: relative;
-    right: 0;
-    bottom: 0;
     position: absolute;
     right: 10%;
     bottom: 0;
 }
 
 #copy {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-	padding: 15px 0;
 	text-align: center;
     color: #636363;
+    width: 100% !important;
+	padding: 30px 0;
     font-size: 10px;
 }
 
 /**********
   Contact
 ***********/
+.contact-cards {
+    text-align: center;
+    margin: 10% auto !important;
+}
+
+.circle-btn {
+    margin-top: 5%;
+}
+
 .circle-btn img {
-    width: 200px;
+    width: 150px;
+}
+
+/**********
+Media Query
+***********/
+@media (max-width: 992px) { 
+    /* Carousel */
+    .carousel-caption {
+        width: 100%;
+        position: relative;
+        left: 0 !important;
+    }
+
+    .carousel-img {
+        width: 55%;
+        left: 0;
+    }
+    
+    .carousel-img img {
+        width: 200px !important;
+        height: 200px !important;
+    }
+    .carousel-indicators {
+        bottom: -80px !important;
+    }
+
+    /* Nav */
+    .nav-items {
+        background-color: #cdc9c3;
+        flex-direction: column;
+        padding-top: 20px;
+    }
+
+    .nav-top a {
+        padding-left: 0;
+        padding: 0 15px;
+        margin-top: 5px !important;
+    }
+
+    .nav-link span {
+        display: none;
+    }
+
+    /* Footer */
+    img.footer-logo {
+        display: none;
+    }
 }
