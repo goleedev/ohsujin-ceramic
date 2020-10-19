@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { authService, firebaseInstance } from 'fbase';
-import Admin from './Admin';
+import leaf from '../images/leaf.png';
+import leaf2 from '../images/leaf2.png';
 
 const Auth = () => {
     const [email, setEmail] = useState("");
@@ -44,8 +45,7 @@ const Auth = () => {
     };
     return (
         <>
-            <form onSubmit={onSubmit} className="form-signin">
-                <h1>{}</h1>
+            <form onSubmit={onSubmit} className="form-signin auth-signin">
                 <input
                     name="email"
                     type="email"
@@ -65,18 +65,15 @@ const Auth = () => {
                     onChange={onChange}
                     className="form-control"
                 />
-                <span onClick={toggleAccount} className="form-signin btn btn-lg btn-primary btn-block">{newAccount ? "Sign In" : "Create Account"}</span>
+                <span onClick={toggleAccount} className="form-signin btn btn-lg btn-primary btn-block">{newAccount ? "로그인하기" : "가입하기"}</span>
                 <button onClick={onSocialClick} name="google" className="form-signin btn btn-lg btn-danger btn-block">
                     <FontAwesomeIcon icon={faGoogle} /> Google로 로그인 
                 </button>
-                <Admin />
-                <input type="submit" name="sign-in" className="mb-3 form-signin text-center" value={newAccount ? "Create Account" : "Log In"} />
+                <input type="submit" name="sign-in" className="mb-3 form-signin text-center" value={newAccount ? "가입하기" : "로그인하기"} />
                 {error && <span className="authError">{error}</span>}
             </form>
-            <div>
-                
-                <p className="mt-5 mb-3 text-muted text-center">&copy; {new Date().getFullYear()}</p>
-            </div>
+            <img src={leaf} data-aos="fade-right" data-aos-duration="1000" className="deco-leaf-1" />
+            <img src={leaf2} data-aos-duration="1000" data-aos="fade-left" className="deco-leaf-2" />
         </>
     );
 };

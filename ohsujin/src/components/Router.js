@@ -6,11 +6,10 @@ import About from 'routes/About';
 import Class from 'routes/Class';
 import Store from 'routes/Store';
 import Contact from 'routes/Contact';
-import Admin from 'routes/Admin';
 import Auth from 'routes/Auth';
 import Profile from 'routes/Profile';
-import Footer from './Footer';
 import Cart from 'routes/Cart';
+import Footer from './Footer';
 
 const AppRouter = ({ userObj, isLoggedIn }) => {
     return (
@@ -40,9 +39,6 @@ const AppRouter = ({ userObj, isLoggedIn }) => {
                 </Route>
                 <Route exact path="/contact">
                     <Contact userObj={userObj}/>   
-                </Route>
-                <Route exact path="/admin">
-                    <Admin />   
                 </Route>
             </Switch>
             <Footer />

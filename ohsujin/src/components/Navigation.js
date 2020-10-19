@@ -18,10 +18,10 @@ const Navigation = (props, {userObj}) => {
             </button>
             <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse justify-content-end`} id="navbarsExample09">
                 <div className="nav-items row">
-                    <Link className="nav-link" to="/about">ABOUT US</Link>
+                    <Link className="nav-link" to="/about">ABOUT ME</Link>
                     <Link className="nav-link" to="/class">CLASS</Link>
                     <Link className="nav-link" to="/store">STORE</Link>
-                    <Link className="nav-link" to="/contact">CONTACT US<span>|</span></Link>
+                    <Link className="nav-link" to="/contact">CONTACT ME<span>|</span></Link>
                     <div className="nav-top row">
                         <Link className="nav-link" to="/login">
                             <FontAwesomeIcon icon={faUser} color={"#555555"} size="2x" />

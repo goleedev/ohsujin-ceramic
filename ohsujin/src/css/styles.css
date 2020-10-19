@@ -1,6 +1,8 @@
 /**********
    Fonts
 ***********/
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
 @font-face {
     font-family: 'GyeonggiBatang';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiBatang.woff') format('woff');
@@ -42,17 +44,29 @@ input {
     box-sizing: border-box;
     appearance: none;
 }
+
+a {
+    text-decoration: none !important;
+    color: #555 !important;
+}
+
+button,
+.btn {
+    color: #555 !important; 
+    outline: none !important;
+    box-shadow: none !important;
+}
   
 body {
     background-color: #fff;
     font-family: 'GmarketSansLight' !important;
     font-size: 14px;
     color: #555555;
+    height: 100vh;
 }
 
 h1 {
-    font-family: 'GmarketSansMedium';
-    font-weight: bold;
+    font-family: 'GyeonggiBatang';
     text-align: center;
 }
 
@@ -74,9 +88,8 @@ h1 {
 }
 
 .carousel-container {
-    margin: 0 auto !important;
-    margin-top: 7% !important;
-    margin-bottom: 15% !important;
+    margin: 7% auto !important;
+    margin-top: 15%;
     vertical-align: middle;
 }
 
@@ -126,15 +139,79 @@ h1 {
     background-color: #555 !important;
 }
 
+.loadmore {
+    margin: 0 auto !important;
+}
+
+.about-product {
+    width: 20%;
+    position: relative;
+    bottom: 0%;
+    float: right;
+    transition: all .2s ease-in-out;
+}
+
+.about-product:hover {
+    transform: scale(1.03);
+}
+
+.about-cards {
+    margin: 10% auto !important;
+    margin-top: 20% !important;
+    padding: 0 !important;
+    width: 80%;
+}
+
+.about-card {
+    overflow: hidden;
+    background-color: #fbf7f0;
+    margin: 0 !important;
+    height: 100%;
+}
+
+.about-card h3 {
+    font-size: 20px !important;
+    font-family: GmarketSansMedium !important;
+    z-index: 100000;
+    padding-top: 5% !important;
+    padding-left: 5% !important;
+}
+
+.card-bottom {
+    margin-top: 15px !important;
+}
+
+.about-card p {
+    font-size: 13px !important;
+    padding-left: 5%;
+}
+
+/**********
+   About
+***********/
+.about-container {
+    border: #fbf7f0 3px solid;
+    margin: 5% auto !important;
+}
+
+.about-container h3 {
+    font-family: 'Sacramento', cursive;
+    background-color: #d9e4dd;
+    text-align: center;
+}
+
 /**********
    Auth
 ***********/
+.auth-signin {
+    margin: 20% auto;
+}
+
 .form-signin {
     width: 100%;
     max-width: 330px;
     padding: 15px;
     font-weight: 400;
-    margin: auto;
 }
 .form-signin .form-control {
     position: relative;
@@ -155,6 +232,21 @@ h1 {
     margin-bottom: 10px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+}
+
+.deco-leaf-1 {
+    width: 30%;
+    position: absolute;
+    top: 15%;
+    z-index: -999;
+}
+
+.deco-leaf-2 {
+    position: absolute;
+    width: 30%;
+    top: 60%;
+    right: 0;
+    z-index: -999;
 }
 
 /**********
@@ -214,6 +306,167 @@ img.footer-logo {
 }
 
 /**********
+   CLASS
+***********/
+.color-violet .container-button {
+    background-color: #cdc9c3;
+}
+.color-violet .container-button:before {
+    background-color: #cdc9c3;
+}
+  .color-violet .w-item span {
+    color: #cdc9c3;
+}
+  
+.color-green .container-button {
+    background-color: #d9e4dd;
+}
+.color-green .container-button:before {
+    background-color: #d9e4dd;
+}
+.color-green .w-item span {
+    color: #d9e4dd;
+}
+  
+.color-blue .container-button {
+    background-color: #cdc9c3;
+}
+.color-blue .container-button:before {
+    background-color: #cdc9c3;
+}
+.color-blue .w-item span {
+    color: #cdc9c3;
+}
+  
+.w-table {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+#class-pricing {
+    display: block;
+    text-align: center;
+    margin: 10% auto !important;
+}
+  
+.w-table-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+  
+.w-container {
+    position: relative;
+    max-width: 100%;
+    margin: 30px auto 0;
+    font-size: 0;
+    text-align: center;
+    margin-top: 35px;
+}
+.w-container .w-card {
+    cursor: pointer;
+    background-color: white !important;
+    border: #fbf7f0 2px solid;
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+    color: #333;
+    font-size: 30px;
+    font-weight: 300;
+    margin: 0 0 30px;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.w-container .w-card .card-header {
+    overflow: hidden;
+    background-color: white;
+    padding: 20px 0 0;
+}
+.w-container .w-card .card-header .w-title, .w-container .w-card .card-header .w-price {
+    position: relative;
+    font-size: 24px;
+    z-index: 2;
+}
+.w-container .w-card .card-header .w-price {
+    font-size: 35px;
+    font-family: GmarketSansMedium !important;
+    padding: 1px 20px 20px;
+}
+.w-container .w-card .card-content {
+    padding: 20px;
+    text-align: left;
+}
+.w-container .w-card .card-content .w-item {
+    font-size: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+.w-container .w-card .card-content .w-item:last-child {
+    border-bottom: none;
+}
+
+.w-container .w-card .container-button {
+    position: relative;
+}
+.w-container .w-card .container-button .w-button {
+    position: relative;
+    display: block;
+    padding: 20px;
+    color: #555;
+    font-weight: 400;
+    z-index: 2;
+    text-decoration: none;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.w-container .w-card .container-button:before, .w-container .w-card .container-button:after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    width: 0%;
+    height: 0%;
+    border-radius: 50%;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.w-container .w-card .container-button:after {
+    z-index: 1;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.w-container .w-card .container-button:hover .w-button {
+    padding: 0px 20px 40px;
+}
+.w-container .w-card .container-button:hover:before {
+    top: -200px;
+    left: -50px;
+    width: 400px;
+    height: 400px;
+}
+.w-container .w-card .container-button:hover:after {
+    top: -200px;
+    left: -50px;
+    width: 400px;
+    height: 400px;
+}
+.w-container .w-card:hover {
+    z-index: 2;
+    margin: -20px 0 50px;
+}
+.w-container .w-card:hover .w-button {
+    opacity: 1;
+}  
+
+/**********
   Contact
 ***********/
 .contact-cards {
@@ -229,6 +482,108 @@ img.footer-logo {
     width: 150px;
 }
 
+.get-in-touch {
+    margin-top: 5%;
+    padding: 0 15% !important;
+}
+
+.get-in-touch .title {
+    padding-bottom: 48px;
+}
+  
+.contact-form .form-field {
+    position: relative;
+    margin: 32px 0;
+}
+
+.contact-form .input-text {
+    display: block;
+    width: 100%;
+    height: 36px;
+    border-width: 0 0 2px 0 !important;
+    border-bottom: #555 2px solid;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.contact-form .input-text:focus {
+    outline: none;
+}
+
+.contact-form .input-text:focus + .label,
+.contact-form .input-text.not-empty + .label {
+    -webkit-transform: translateY(-24px);
+            transform: translateY(-24px);
+}
+
+.contact-form .input-text:valid + .label {
+    -webkit-transform: translateY(-24px);
+            transform: translateY(-24px);
+}
+
+.contact-form .label {
+    position: absolute;
+    left: 20px;
+    bottom: 11px;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #555;
+    cursor: text;
+    transition: -webkit-transform .2s ease-in-out;
+    transition: transform .2s ease-in-out;
+    transition: transform .2s ease-in-out, 
+    -webkit-transform .2s ease-in-out;
+}
+
+.js-input option {
+    font-size: 12px !important;
+}
+
+.contact-form .submit-btn {
+    display: inline-block;
+    background-color: #d9e4dd;
+    color: #555;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 16px;
+    padding: 8px 16px;
+    border: none;
+    width:200px;
+    cursor: pointer;
+}
+  
+.contact-form .submit-btn:hover {
+    background-color: #b7c9bd;
+}
+
+/**********
+   STORE
+***********/
+.store-product {
+    width: 150px;
+    padding: 15% 10%;
+    transition: all .2s ease-in-out;
+}
+
+.store-product:hover {
+    transform: scale(1.03);
+}
+
+.store-list {
+    text-align: center;
+    margin: 15% auto !important;
+}
+
+.store-nav a {
+    padding: 0 3%;
+}
+
+.store-nav {
+    margin-top: 1%;
+    margin-bottom: 5%;
+}
+
 /**********
 Media Query
 ***********/
@@ -242,7 +597,7 @@ Media Query
 
     .carousel-img {
         width: 55%;
-        left: 0;
+        left: 15%;
     }
     
     .carousel-img img {
@@ -255,7 +610,8 @@ Media Query
 
     /* Nav */
     .nav-items {
-        background-color: #cdc9c3;
+        background-color: #fffbf7f0;
+        border: #d9e4dd 2px solid;
         flex-direction: column;
         padding-top: 20px;
     }
@@ -269,9 +625,32 @@ Media Query
     .nav-link span {
         display: none;
     }
-
     /* Footer */
     img.footer-logo {
         display: none;
+    }
+}
+
+/* Medium Devices */
+@media (max-width: 768px) { 
+    /* Home */
+    .carousel-img {
+        width: 55%;
+        left: 10%;
+    }
+
+    .card-left {
+        margin-right: 0%;
+        padding: 0 !important;
+        margin-bottom: 15px;
+    }
+
+    .about-cards {
+        margin: 15% auto !important;
+        margin-top: 30% !important;
+    }
+
+    .contact-cards {
+        margin: 20% auto !important;
     }
 }
