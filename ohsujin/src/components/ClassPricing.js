@@ -5,7 +5,7 @@ import { faClock, faCalendar, faWonSign } from "@fortawesome/free-solid-svg-icon
 const ClassPricing = () => {
     return (
         <>
-        <div id="class-pricing" className="w-table-cell container">
+        <div data-aos="fade-right" id="class-pricing" className="w-table-cell container">
             <h1>수업 안내</h1>
             <p>* 더 다양한 수업을 보고 싶으시다면, 더보기 버튼을 눌러 주세요.</p>
             <div className="w-container">

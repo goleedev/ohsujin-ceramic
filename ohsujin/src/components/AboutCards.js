@@ -5,7 +5,7 @@ import pot1 from '../images/product1.png';
 function AboutCards() {
     return (
         <>
-        <div className="row margin-top about-cards">
+        <div data-aos="fade-up" className="row margin-top about-cards">
             <div className="col-sm-12">
                 <div className="row about-items">
                     <Link to="/store"  className="col-sm-12 col-md-8 card-left">

@@ -6,7 +6,7 @@ import email from '../images/circle4.png';
 
 const ContactUsCards = () => {
     return (
-        <div className="row container contact-cards">
+        <div data-aos="fade-left" className="row container contact-cards">
             <h1 className="col-lg-12">문의하기</h1>
             <a href="https://pf.kakao.com/_ZExmGj" target="_blank" rel="noopener noreferrer" className="circle-btn col-md-3 col-sm-6">
                 <img src={kakao} alt="kakao" />
