@@ -204,7 +204,12 @@ h1 {
    Auth
 ***********/
 .auth-signin {
-    margin: 20% auto;
+    margin: 18% auto;
+}
+
+.auth-signin h1 {
+    margin-bottom: 50px !important;
+    background-color: #fbf7f0;
 }
 
 .form-signin {
@@ -309,13 +314,13 @@ img.footer-logo {
    CLASS
 ***********/
 .color-violet .container-button {
-    background-color: #cdc9c3;
+    background-color: #fbf7f0;
 }
 .color-violet .container-button:before {
-    background-color: #cdc9c3;
+    background-color: #fbf7f0;
 }
   .color-violet .w-item span {
-    color: #cdc9c3;
+    color: #fbf7f0;
 }
   
 .color-green .container-button {
@@ -344,6 +349,8 @@ img.footer-logo {
     height: 100%;
 }
 
+#class-oneday,
+#class-regular,
 #class-pricing {
     display: block;
     text-align: center;
@@ -472,14 +479,20 @@ img.footer-logo {
 .contact-cards {
     text-align: center;
     margin: 10% auto !important;
+    margin-bottom: 15% !important;
 }
 
 .circle-btn {
     margin-top: 5%;
+    transition: all .2s ease-in-out;
 }
 
 .circle-btn img {
     width: 150px;
+}
+
+.circle-btn img:hover {
+    transform: scale(1.03);
 }
 
 .get-in-touch {

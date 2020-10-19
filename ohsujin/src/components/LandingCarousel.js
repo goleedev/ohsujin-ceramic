@@ -13,7 +13,7 @@ const LandingCarousel = () => {
             <div className="carousel-caption">
                 <h2>시그니처 도자기</h2>
                 <p>그릇부터 혼밥세트 까지</p>
-                <Link to="/shop" className="btn">구경하기</Link>
+                <Link to="/store" className="btn">구경하기</Link>
             </div>
             <div className="carousel-img">
                 <img

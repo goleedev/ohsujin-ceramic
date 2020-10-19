@@ -46,6 +46,7 @@ const Auth = () => {
     return (
         <>
             <form onSubmit={onSubmit} className="form-signin auth-signin">
+                <h1>Welcome</h1>
                 <input
                     name="email"
                     type="email"
