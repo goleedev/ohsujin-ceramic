@@ -9,6 +9,7 @@ import Contact from 'routes/Contact';
 import Auth from 'routes/Auth';
 import Profile from 'routes/Profile';
 import Cart from 'routes/Cart';
+import NotFound from 'routes/NotFound';
 import Footer from './Footer';
 
 const AppRouter = ({ userObj, isLoggedIn }) => {
@@ -16,30 +17,16 @@ const AppRouter = ({ userObj, isLoggedIn }) => {
         <Router>
             <Navigation userObj={userObj}/>
             <Switch>
-                <Route exact path="/">
-                    <Home />   
-                </Route>
-                <Route exact path="/login">
-                    <Auth />
-                </Route> 
-                <Route exact path="/profile">
-                    <Profile />
-                </Route>
-                <Route exact path="/cart">
-                    <Cart />   
-                </Route>
-                <Route exact path="/about">
-                    <About />   
-                </Route>
-                <Route exact path="/class">
-                    <Class />   
-                </Route>
-                <Route exact path="/store">
-                    <Store />   
-                </Route>
-                <Route exact path="/contact">
-                    <Contact userObj={userObj}/>   
-                </Route>
+                <Route exact path="/" component={Home} />
+                <Route exact path="/login" component={Auth} />
+                <Route exact path="/profile" component={Profile} />
+                <Route exact path="/about" component={About} />
+                <Route exact path="/class" component={Class} />
+                <Route exact path="/store" component={Store} /> 
+                <Route exact path="/store/:id" component={Store} /> 
+                <Route path="/cart/:id" component={Cart} />
+                <Route exact path="/contact" component={Contact} />
+                <Route component={NotFound} />
             </Switch>
             <Footer />
         </Router>

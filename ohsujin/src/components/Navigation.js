@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
-const Navigation = (props, {userObj}) => {
+const Navigation = ({userObj}) => {
     const [isNavCollapsed, setIsNavCollapsed] = useState(true);
     const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
 
