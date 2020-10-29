@@ -1,9 +1,6 @@
 import React, { useState } from 'react'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGoogle } from "@fortawesome/free-brands-svg-icons";
-import { authService, firebaseInstance } from 'fbase';
-import leaf from '../images/leaf.png';
-import leaf2 from '../images/leaf2.png';
+import { authService } from 'fbase';
+import AuthForm from 'components/AuthForm';
 
 const Auth = () => {
     const [email, setEmail] = useState("");
@@ -11,9 +8,7 @@ const Auth = () => {
     const [newAccount, setNewAccount] = useState(true);
     const [error, setError] = useState("");
     const onChange = (event) => {
-    const {
-        target: { name, value },
-    } = event;
+        const { target: { name, value }, } = event;
         if (name === "email") {
             setEmail(value);
         } else if (name === "password") {
@@ -35,48 +30,35 @@ const Auth = () => {
         }
     };
     const toggleAccount = () => setNewAccount((prev) => !prev);
-    const onSocialClick = async (event) => {
-        const { target: { name }, } = event;
-        let provider;
-        if (name === "google") {
-            provider = new firebaseInstance.auth.GoogleAuthProvider();
-        }
-        await authService.signInWithPopup(provider);
-    };
     return (
         <>
-            <form onSubmit={onSubmit} className="form-signin auth-signin">
-                <h1>Welcome</h1>
-                <input
-                    name="email"
-                    type="email"
-                    placeholder="  Email"
-                    required
-                    autoFocus
-                    value={email}
-                    onChange={onChange}
-                    className="form-control"
-                />
-                <input
-                    name="password"
-                    type="password"
-                    placeholder="  Password"
-                    required
-                    value={password}
-                    onChange={onChange}
-                    className="form-control"
-                />
-                <span onClick={toggleAccount} className="form-signin btn btn-lg btn-primary btn-block">{newAccount ? "로그인하기" : "가입하기"}</span>
-                <button onClick={onSocialClick} name="google" className="form-signin btn btn-lg btn-danger btn-block">
-                    <FontAwesomeIcon icon={faGoogle} /> Google로 로그인 
-                </button>
-                <input type="submit" name="sign-in" className="mb-3 form-signin text-center" value={newAccount ? "가입하기" : "로그인하기"} />
-                {error && <span className="authError">{error}</span>}
-            </form>
-            <img src={leaf} data-aos="fade-right" data-aos-duration="1000" className="deco-leaf-1" />
-            <img src={leaf2} data-aos-duration="1000" data-aos="fade-left" className="deco-leaf-2" />
+         <form onSubmit={onSubmit} className="form-signin auth-signin">
+            <h1>Welcome</h1>
+            <input
+                name="email"
+                type="email"
+                placeholder="  Email"
+                required
+                value={email}
+                onChange={onChange}
+                className="form-control"
+            />
+            <input
+                name="password"
+                type="password"
+                placeholder="  Password"
+                required
+                value={password}
+                onChange={onChange}
+                className="form-control"
+            />
+            <AuthForm />
+            <input type="submit" className="form-signin btn btn-lg btn-primary btn-block" value={newAccount ? "가입하기" : "로그인"} />
+            {error && <span className="authError">{error}</span>}
+        </form>
+        <span onClick={toggleAccount} className="form-alter mb-3 form-signin text-center">{newAccount ? "로그인" : "가입하기"}</span>   
         </>
-    );
-};
+    )
+}
 
 export default Auth;

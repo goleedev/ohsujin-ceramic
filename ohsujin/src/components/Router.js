@@ -10,6 +10,7 @@ import Auth from 'routes/Auth';
 import Profile from 'routes/Profile';
 import Cart from 'routes/Cart';
 import NotFound from 'routes/NotFound';
+import ScrollToTop from 'components/ScrollToTop';
 import Footer from './Footer';
 
 const AppRouter = ({ userObj, isLoggedIn }) => {
@@ -18,16 +19,17 @@ const AppRouter = ({ userObj, isLoggedIn }) => {
             <Navigation userObj={userObj}/>
             <Switch>
                 <Route exact path="/" component={Home} />
-                <Route exact path="/login" component={Auth} />
-                <Route exact path="/profile" component={Profile} />
+                {/* <Route exact path="/login" component={Auth} /> */}
+                {/* <Route exact path="/profile" component={Profile} /> */}
                 <Route exact path="/about" component={About} />
                 <Route exact path="/class" component={Class} />
-                <Route exact path="/store" component={Store} /> 
-                <Route exact path="/store/:id" component={Store} /> 
-                <Route path="/cart/:id" component={Cart} />
+                {/* <Route exact path="/store" component={Store} />  */}
+                {/* <Route exact path="/store/:id" component={Store} /> 
+                <Route path="/cart/:id" component={Cart} /> */}
                 <Route exact path="/contact" component={Contact} />
                 <Route component={NotFound} />
             </Switch>
+            <ScrollToTop />
             <Footer />
         </Router>
     )

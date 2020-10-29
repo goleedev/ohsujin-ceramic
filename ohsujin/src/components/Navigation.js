@@ -7,7 +7,6 @@ import { faUser, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 const Navigation = ({userObj}) => {
     const [isNavCollapsed, setIsNavCollapsed] = useState(true);
     const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
-
     return (
         <nav className="navbar navbar-expand-lg navbar-light rounded container">
             <Link className="navbar-brand" to="/">
@@ -20,16 +19,20 @@ const Navigation = ({userObj}) => {
                 <div className="nav-items row">
                     <Link className="nav-link" to="/about">ABOUT ME</Link>
                     <Link className="nav-link" to="/class">CLASS</Link>
-                    <Link className="nav-link" to="/store">STORE</Link>
-                    <Link className="nav-link" to="/contact">CONTACT ME<span>|</span></Link>
-                    <div className="nav-top row">
+                    <a className="nav-link" href="https://smartstore.naver.com/thedamda_ceramic" target="_blank">
+                        STORE
+                    </a>
+                    <Link className="nav-link" to="/contact">CONTACT ME
+                    {/* <span>|</span> */}
+                    </Link>
+                    {/* <div className="nav-top row">
                         <Link className="nav-link" to="/login">
                             <FontAwesomeIcon icon={faUser} color={"#555555"} size="2x" />
                         </Link>
                         <Link className="nav-link" to="/cart">
                             <FontAwesomeIcon icon={faShoppingCart} color={"#555555"} size="2x" />
                         </Link>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </nav>

@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 const LandingCarousel = () => {
     return (
-    <Carousel className="carousel-container container">
+    <Carousel data-aos="fade-left" className="carousel-container container">
         <Carousel.Item>
             <div className="carousel-caption">
                 <h2>시그니처 도자기</h2>

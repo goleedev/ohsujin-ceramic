@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { dbService, storageService } from 'fbase';
+import { dbService } from 'fbase';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSortAmountDownAlt } from "@fortawesome/free-solid-svg-icons";
 
 const Store = () => {
     const [products, setProducts] = useState([]);
     let items = dbService.collection('products');
-    let initialItems = [];
 
     useEffect(() => {
         items
@@ -17,7 +16,6 @@ const Store = () => {
             ...doc.data(),
             }));
             setProducts(productArray);
-            initialItems = productArray;
         });
     }, []);
     const onClick = async(event) => {
@@ -47,11 +45,10 @@ const Store = () => {
             });
         }
     }
-
-    const onReloadClick = async(event) => {
-        window.location.reload();
+    const onReloadClick = async() => {
+        await window.location.reload();
     }
-    
+
     return (
         <>
             <div className="store-list container row">
@@ -67,7 +64,7 @@ const Store = () => {
                 </nav>
                 <div className="container row product-item">
                     {products.map((product) => 
-                        <div key={product.id} className="col-lg-3 col-md-6">
+                        <div data-aos="fade-up" key={product.id} className="col-lg-3 col-md-6">
                             <img src={product.attachmentUrl} className="store-product" />
                             <h4>{product.productTitle}</h4>
                             <p>₩ {product.price / 1000},000</p>

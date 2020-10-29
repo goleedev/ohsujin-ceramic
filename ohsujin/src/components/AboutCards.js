@@ -8,7 +8,7 @@ function AboutCards() {
         <div data-aos="fade-up" className="row margin-top about-cards">
             <div className="col-sm-12">
                 <div className="row about-items">
-                    <Link to="/store"  className="col-sm-12 col-md-8 card-left">
+                    <Link to="/store" className="col-sm-12 col-md-8 card-left">
                         <div className="row about-card">
                             <div className="col-sm-12">
                                 <h3>STORE</h3>

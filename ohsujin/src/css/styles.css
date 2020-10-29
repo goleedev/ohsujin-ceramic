@@ -63,6 +63,7 @@ body {
     font-size: 14px;
     color: #555555;
     height: 100vh;
+    width: 100%;
 }
 
 h1 {
@@ -91,6 +92,7 @@ h1 {
     margin: 7% auto !important;
     margin-top: 10% !important;
     vertical-align: middle;
+    width: 100% !important;
 }
 
 .carousel-caption {
@@ -114,8 +116,9 @@ h1 {
 .carousel-img {
     float: right;
     width: 60%;
+    text-align: right !important;
     position: relative;
-    left: 20%;
+    right: 15% !important;
 }
 
 .carousel-img img {
@@ -159,7 +162,7 @@ h1 {
     margin: 10% auto !important;
     margin-top: 20% !important;
     padding: 0 !important;
-    width: 80%;
+    width: 70%;
 }
 
 .about-card {
@@ -196,7 +199,7 @@ h1 {
 
 .about-header {
     background-color: #b7c9bd;
-    height: 60vh;
+    height: 65vh;
     display: flex;
     align-items: center !important;
 }
@@ -205,6 +208,7 @@ h1 {
     font-family: GmarketSansBold;
     font-size: 70px;
     color: #fbf7f0;
+    padding-top: 5%;
 }
 
 .about-title span {
@@ -255,6 +259,7 @@ h1 {
 ***********/
 .auth-signin {
     margin: 18% auto;
+    margin-bottom: 0;
 }
 
 .auth-signin h1 {
@@ -268,6 +273,10 @@ h1 {
     padding: 15px;
     font-weight: 400;
 }
+.form-signin .btn {
+    margin: 5px 0;
+}
+
 .form-signin .form-control {
     position: relative;
     box-sizing: border-box;
@@ -293,6 +302,7 @@ h1 {
     width: 30%;
     position: absolute;
     top: 15%;
+    left: 0;
     z-index: -999;
 }
 
@@ -302,6 +312,19 @@ h1 {
     top: 60%;
     right: 0;
     z-index: -999;
+}
+
+.authError {
+    color: #fa7f72;
+    text-align: center;
+    margin: 0 auto !important;
+    font-size: 12px;
+}
+
+.form-alter {
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 18% !important;
 }
 
 /**********
@@ -358,6 +381,20 @@ img.footer-logo {
     width: 100% !important;
 	padding: 30px 0;
     font-size: 10px;
+}
+
+.scroll-to-top {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    color: #555;
+    opacity: 0.7;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.scroll-to-top .show {
+    visibility: visible;
 }
 
 /**********
@@ -530,7 +567,7 @@ img.footer-logo {
 .contact-cards {
     text-align: center;
     margin: 10% auto !important;
-    padding: 0 15% !important;
+    padding: 0 !important;
 }
 
 .circle-btn {
@@ -622,13 +659,15 @@ img.footer-logo {
     background-color: #b7c9bd;
 }
 
-.alert {
+#alert {
     text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 24px;
     padding:10px;
-    background:#79c879;
-    color:#fff;
-    margin-bottom: 10%;
-    display: none;
+    color:#79c879;
+    margin: 3% auto !important;
+    z-index: 99999;
 }
 
 #file {
@@ -636,6 +675,24 @@ img.footer-logo {
     width: 100%;
 }
 
+/* Loading */
+.loading-container {
+    width: 100%;
+    height: 100%;
+    margin: 20% auto;
+    text-align: center;
+}
+
+.loading-container h3 {
+    margin-top: 10%;
+    color: #555555 !important;
+    font-size: 36px !important;
+}
+
+.loading {
+    width: 100px !important;
+    height: 100px !important;
+}
 /**********
    STORE
 ***********/
@@ -654,8 +711,9 @@ img.footer-logo {
     margin: 10% auto !important;
 }
 
-.store-list h1 {
+.store-title {
     cursor: pointer;
+    margin: 0 auto !important;
     margin-bottom: 5%;
 }
 
@@ -667,10 +725,6 @@ img.footer-logo {
 .store-nav {
     margin-top: 1%;
     margin-bottom: 5%;
-}
-
-.product-item {
-    cursor: pointer;
 }
 
 /**********
@@ -745,6 +799,10 @@ Media Query
     /* About */
     .about-title-bottom {
         top: 0px;
+    }
+
+    .about-cards {
+        width: 80%;
     }
     /* Footer */
     img.footer-logo {
